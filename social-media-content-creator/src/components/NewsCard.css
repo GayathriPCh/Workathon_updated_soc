@@ -1,0 +1,35 @@
+.news-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .news-card-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .news-card-content {
+    padding: 15px;
+  }
+  
+  .news-card-headline {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .news-card-author, .news-card-category, .news-card-source {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .news-card-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .news-card-link:hover {
+    text-decoration: underline;
+  }

@@ -1,0 +1,24 @@
+/* src/pages/Home.css */
+.home-container {
+    padding: 20px;
+  }
+  
+  .articles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  header {
+    margin-bottom: 20px;
+  }
+  
+  nav a {
+    margin: 0 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    border-radius: 5px;
+  }
+  
