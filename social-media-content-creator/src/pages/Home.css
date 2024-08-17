@@ -3,22 +3,30 @@
     padding: 20px;
   }
   
-  .articles-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+  header {
+    text-align: center;
+    margin-bottom: 30px;
   }
   
-  header {
-    margin-bottom: 20px;
+  header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
   }
   
   nav a {
     margin: 0 10px;
-    padding: 10px 20px;
     text-decoration: none;
-    color: white;
-    background-color: #007bff;
-    border-radius: 5px;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .articles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
   }
   

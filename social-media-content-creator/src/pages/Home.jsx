@@ -1,7 +1,8 @@
 // src/pages/Home.jsx
 import { useEffect, useState } from 'react';
 import NewsCard from '../components/NewsCard';
-import './Home.css'; // Make sure you have some basic styles here
+import { Link } from 'react-router-dom';
+import './Home.css'; // Import the CSS file for styling
 
 const Home = () => {
   const [articles, setArticles] = useState([]);
@@ -23,17 +24,16 @@ const Home = () => {
     <div className="home-container">
       <header>
         <h1>Welcome to Buzzlines</h1>
-        
+        <nav>
+          <Link to="/signup">Sign Up</Link>
+          <Link to="/signin">Sign In</Link>
+        </nav>
       </header>
 
       <div className="articles-container">
-        {articles.length > 0 ? (
-          articles.map((article, index) => (
-            <NewsCard key={index} article={article} />
-          ))
-        ) : (
-          <p>Loading articles...</p>
-        )}
+        {articles.map((article, index) => (
+          <NewsCard key={index} article={article} />
+        ))}
       </div>
     </div>
   );
