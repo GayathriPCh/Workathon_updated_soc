@@ -1,9 +1,9 @@
-// src/components/SignUp.jsx
 import { useState } from 'react';
 import { auth } from '../firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
 import { db } from '../firebase'; // Import the Firestore instance
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for redirect
 import './SignUp.css'; // Import the CSS file
 
 const SignUp = () => {
@@ -12,6 +12,8 @@ const SignUp = () => {
   const [displayName, setDisplayName] = useState(''); // Added field for displayName
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [signUpSuccess, setSignUpSuccess] = useState(false); // New state for sign up success
+  const navigate = useNavigate(); // Initialize useNavigate hook
 
   const handleSignUp = async () => {
     setLoading(true);
@@ -28,15 +30,23 @@ const SignUp = () => {
         createdAt: new Date(),
       });
 
-      // Redirect or show a success message
-      // For example, navigate to home page:
-      // navigate('/');
+      setSignUpSuccess(true); // Update state on successful sign up
+      setTimeout(() => navigate('/signin'), 2000); // Redirect to sign-in page after 2 seconds
     } catch (error) {
       setError(error.message);
     } finally {
       setLoading(false);
     }
   };
+
+  if (signUpSuccess) {
+    return (
+      <div className="signup-success-container">
+        <h1>Success!</h1>
+        <p>You have successfully signed up. Redirecting you to <a onClick={() => navigate('/signin')}>sign in</a>...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="signup-container">
@@ -63,6 +73,9 @@ const SignUp = () => {
       <button onClick={handleSignUp} disabled={loading}>
         {loading ? 'Signing Up...' : 'Sign Up'}
       </button>
+      <p className="login-link">
+        Already have an account? <a onClick={() => navigate('/signin')}>Sign In</a>
+      </p>
     </div>
   );
 };

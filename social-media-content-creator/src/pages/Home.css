@@ -1,5 +1,12 @@
 /* src/pages/Home.css */
 
+@font-face {
+  font-family: 'MutalisFashion';
+  src: url('./MutalisFashionPersonalUseRegular-w1p7P.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .home-container {
   font-family: Arial, sans-serif;
   position: relative;
@@ -9,7 +16,13 @@ header {
   background-color: #333;
   color: white;
   padding: 10px;
-  width: 100%; 
+  width: 100%;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-family: 'MutalisFashion', sans-serif;
 }
 
 .navbar {
@@ -19,7 +32,7 @@ header {
 }
 
 .navbar a {
-  color: white;
+  color: rgb(247, 216, 252);
   text-decoration: none;
   font-weight: bold;
 }
@@ -32,12 +45,36 @@ header {
   display: flex;
   justify-content: space-between;
   margin: 10px 0;
+  align-items: center;
 }
 
-.filter-bar input,
-.filter-bar select {
-  padding: 5px;
+.filter-bar input {
+  padding: 10px;
   font-size: 16px;
+  width: 1000px;
+  border-radius: 5px;
+  border: 1px solid transparent; /* Set the border to transparent */
+  background-image: linear-gradient(white, white), /* Background color */
+                    linear-gradient(to right, #41c0ff, #fcbcf9); /* Gradient outline */
+  background-origin: border-box; /* Ensure the gradient follows the border */
+  background-clip: content-box, border-box; /* Clip the background to ensure it covers only the content and border */
+  outline: none;
+}
+
+
+.filter-bar select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 25px;
+  background-color: #6A5ACD;
+  color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-bar select:hover {
+  background-color: #0adfdf;
 }
 
 .articles-container {
@@ -47,24 +84,26 @@ header {
   justify-content: center;
 }
 
+.create-post-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #89f7fe, #7a66ff);
+  color: black;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.create-post-button:hover {
+  background: linear-gradient(to right, #3cf9ffbb, #89f7fe);
+  transform: translateY(-3px);
+}
+
 section {
   margin: 20px;
 }
 
 h2 {
   margin-top: 20px;
-}
-/* src/pages/Home.css */
-.create-post-button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.create-post-button:hover {
-  background-color: #0056b3;
 }

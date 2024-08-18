@@ -44,7 +44,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <header>
-        <h1>Welcome to Buzzlines</h1>
+        <h1>Welcome to Flick</h1>
         <nav className="navbar">
           <a href="/home#trending-news">Trending News</a>
           <a href="/custom-post">Custom Post</a>

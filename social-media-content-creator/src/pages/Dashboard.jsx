@@ -1,9 +1,9 @@
-// src/pages/Dashboard.jsx
 import { useState, useEffect } from 'react';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 import { db } from '../firebase';
 import { auth } from '../firebase'; // Import auth for user ID
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import './Dashboard.css'; // Import CSS for styling
 
 const Dashboard = () => {
   const [posts, setPosts] = useState([]);
@@ -30,17 +30,16 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-container">
-              <button onClick={() => navigate('/home')} className="back-button">Back to Home</button>
-
+      <button onClick={() => navigate('/home')} className="back-button">Back to Home</button>
       <h1>Your Posts</h1>
       {posts.length === 0 ? (
         <p>No posts available</p>
       ) : (
-        <ul>
+        <ul className="posts-list">
           {posts.map((post, index) => (
-            <li key={index}>
+            <li key={index} className="post-item">
               <p>{post.content}</p>
-              <small>{post.createdAt.toDate().toLocaleString()}</small>
+              <small>{new Date(post.createdAt.seconds * 1000).toLocaleString()}</small>
             </li>
           ))}
         </ul>

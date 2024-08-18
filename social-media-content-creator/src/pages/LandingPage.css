@@ -1,92 +1,90 @@
-/* src/pages/LandingPage.css */ 
- 
+@font-face {
+  font-family: 'MutalisFashion';
+  src: url('./MutalisFashionPersonalUseRegular-w1p7P.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 body { 
   margin: 0; 
   font-family: 'Roboto', sans-serif; 
-  background-color: #B2B5E0; /* Light Steel Blue Background */ 
-  color: #333; /* Adjusted below */ 
+  background-color: #e9d3ff; /* Light Steel Blue Background */ 
+  color: #333; 
   display: flex; 
   justify-content: center; 
   align-items: center; 
   min-height: 100vh; 
+  flex-direction: column;
+  padding: 20px;
 } 
- 
+
 .landing-page-container { 
   max-width: 900px; 
   width: 100%; 
   padding: 40px; 
-  background-color: #ffffff; /* White Container */ 
+  background-color: #fefefe; 
   border-radius: 20px; 
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); 
   text-align: center; 
-  margin: 20px; 
   position: relative; 
   overflow: hidden; 
 } 
- 
+
 header { 
   margin-bottom: 40px; 
 } 
- 
+
 header h1 { 
-  font-size: 3.5rem; 
-  color: #C5ADC5; /* Pastel Purple */ 
+  font-size: 5rem; 
+  color: #ffffff; 
   font-weight: 700; 
   margin-bottom: 10px; 
+  font-family: 'MutalisFashion', sans-serif;
 } 
- 
+
 header p { 
   font-size: 1.4rem; 
-  color: #6c757d; /* Adjusted to a softer gray */ 
+  color: #f9fcff; 
 } 
- 
+
 .features { 
   margin: 40px 0; 
 } 
- 
-.features h2 { 
-  font-size: 2.5rem; 
-  color: #C5ADC5; /* Pastel Purple */ 
-  margin-bottom: 20px; 
-  font-weight: 700; 
-} 
- 
-.features ul { 
-  list-style: none; 
-  padding: 0; 
-  margin: 0; 
-  text-align: left; 
-  display: inline-block; 
-} 
- 
-.features ul li { 
-  font-size: 1.2rem; 
-  margin: 15px 0; 
-  color: #495057; /* Adjusted to a softer neutral gray */ 
-  padding: 10px; 
-  border-bottom: 1px solid #ddd; 
-  position: relative; 
-  padding-left: 20px; 
-} 
- 
-.features ul li::before { 
-  content: '•'; 
-  color: #C5ADC5; /* Pastel Purple */ 
-  position: absolute; 
-  left: 0; 
-  font-size: 1.5rem; 
-  line-height: 1.5; 
-} 
- 
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.feature-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.feature-text {
+  color: #000000;
+  flex: 1;
+  padding: 20px;
+}
+
+.feature-image {
+  flex: 1;
+  padding: 20px;
+}
+
+.feature-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
 .auth-buttons { 
   margin-top: 40px; 
 } 
- 
+
 .auth-buttons .btn { 
   display: inline-block; 
   margin: 10px; 
   padding: 15px 30px; 
-  background-color: #C5ADC5; /* Pastel Purple */ 
+  background-color: #C5ADC5; 
   color: white; 
   text-decoration: none; 
   border-radius: 30px; 
@@ -96,22 +94,22 @@ header p {
   cursor: pointer; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 } 
- 
+
 .auth-buttons .btn:hover { 
-  background-color: #a98c9e; /* Slightly darker pastel purple */ 
+  background-color: #a98c9e; 
   transform: translateY(-3px); 
 } 
- 
+
 .auth-buttons .btn:active { 
-  background-color: #8a6b7c; /* Even darker pastel purple */ 
+  background-color: #8a6b7c; 
   transform: translateY(0); 
 } 
- 
+
 .auth-buttons .btn-secondary { 
-  background-color: #B2B5E0; /* Light Steel Blue */ 
+  background-color: #B2B5E0; 
   color: #333; 
 } 
- 
+
 .auth-buttons .btn-secondary:hover { 
-  background-color: #9a9dd4; /* Slightly darker light steel blue */ 
+  background-color: #9a9dd4; 
 }

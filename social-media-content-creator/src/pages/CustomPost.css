@@ -1,52 +1,110 @@
 .custom-post-container {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  }
-  
-  .custom-post-container h1 {
-    text-align: center;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .back-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-bottom: 20px;
-  }
-  
-  .back-button:hover {
-    background-color: #0056b3;
-  }
-  textarea,
-  input,
-  select {
-    padding: 10px;
-    font-size: 16px;
-    margin: 5px 0;
-  }
-  
-  button {
-    padding: 10px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button:disabled {
-    background-color: #cccccc;
-  }
-  
-  .generated-post {
-    margin-top: 20px;
-  }
-  
+  padding: 70px;
+  font-family: 'Poppins', sans-serif; /* Use a modern font */
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  background: #d3d3ff; /* Light background for contrast */
+  border-radius: 16px; /* Rounded corners for the container */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+@font-face {
+  font-family: 'MutalisFashion';
+  src: url('./MutalisFashionPersonalUseRegular-w1p7P.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+.custom-post-container h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: 'MutalisFashion', sans-serif;
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+textarea,
+input,
+select {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px; /* Rounded corners */
+  border: 2px solid #e0e0e0; /* Light border color */
+  background: white; /* Clean background */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); /* Soft inner shadow */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+  border-color: #007bff; /* Highlight border on focus */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25); /* Soft focus glow */
+  outline: none; /* Remove default outline */
+}
+
+button {
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #007bff, #21d4fd); /* Gradient background */
+  color: white;
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #0056b3, #1ea1ff); /* Darker gradient on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+button:disabled {
+  background: #cccccc; /* Disabled button style */
+  cursor: not-allowed;
+}
+
+.back-button {
+  background: linear-gradient(135deg, #007bff, #21d4fd);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.back-button:hover {
+  background: linear-gradient(135deg, #0056b3, #1ea1ff);
+  transform: translateY(-2px);
+}
+
+.generated-post {
+  margin-top: 30px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  color: #333;
+}
+
+.generated-post h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #007bff; /* Header color for generated post */
+}
+
+.generated-post p {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #555; /* Softer text color */
+}

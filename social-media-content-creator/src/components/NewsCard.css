@@ -1,35 +1,59 @@
 .news-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    max-width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .news-card-image {
-    width: 100%;
-    height: auto;
-  }
-  
-  .news-card-content {
-    padding: 15px;
-  }
-  
-  .news-card-headline {
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  
-  .news-card-author, .news-card-category, .news-card-source {
-    font-size: 0.9rem;
-    color: #555;
-  }
-  
-  .news-card-link {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .news-card-link:hover {
-    text-decoration: underline;
-  }
+  border-radius: 16px; /* Increase the border radius for more rounded corners */
+  overflow: hidden;
+  max-width: 320px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Enhance the shadow for a sleeker look */
+  background: white; /* Ensure a clean background */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent; /* Transparent border for gradient effect */
+  background-image: linear-gradient(white, white), 
+                    linear-gradient(to right, #21d4fd, #b721ff); /* Subtle gradient outline */
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.news-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+}
+
+.news-card-image {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 16px; /* Match the card’s rounded corners */
+  border-top-right-radius: 16px;
+  object-fit: cover; /* Ensure the image fills the space nicely */
+}
+
+.news-card-content {
+  padding: 20px;
+}
+
+.news-card-headline {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333; /* Slightly darker headline */
+}
+
+.news-card-author,
+.news-card-category,
+.news-card-source {
+  font-size: 0.9rem;
+  color: #666; /* Softer text color for author, category, and source */
+  margin-bottom: 8px;
+}
+
+.news-card-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.news-card-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
