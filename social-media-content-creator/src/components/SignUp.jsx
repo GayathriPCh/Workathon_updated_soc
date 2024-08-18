@@ -4,6 +4,7 @@ import { auth } from '../firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
 import { db } from '../firebase'; // Import the Firestore instance
+import './SignUp.css'; // Import the CSS file
 
 const SignUp = () => {
   const [email, setEmail] = useState('');
@@ -38,7 +39,7 @@ const SignUp = () => {
   };
 
   return (
-    <div>
+    <div className="signup-container">
       <h1>Sign Up</h1>
       {error && <p className="error-message">{error}</p>}
       <input
