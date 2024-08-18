@@ -1,47 +1,117 @@
-/* src/pages/LandingPage.css */
-
-.landing-page-container {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-  }
-  
-  header p {
-    font-size: 1.2rem;
-    color: #666;
-  }
-  
-  .features h2 {
-    margin-top: 30px;
-    font-size: 2rem;
-  }
-  
-  .features ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .features ul li {
-    font-size: 1.1rem;
-    margin: 10px 0;
-  }
-  
-  .auth-buttons .btn {
-    display: inline-block;
-    margin: 15px;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-  }
-  
-  .auth-buttons .btn:hover {
-    background-color: #0056b3;
-  }
-  
+/* src/pages/LandingPage.css */ 
+ 
+body { 
+  margin: 0; 
+  font-family: 'Roboto', sans-serif; 
+  background-color: #B2B5E0; /* Light Steel Blue Background */ 
+  color: #333; /* Adjusted below */ 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  min-height: 100vh; 
+} 
+ 
+.landing-page-container { 
+  max-width: 900px; 
+  width: 100%; 
+  padding: 40px; 
+  background-color: #ffffff; /* White Container */ 
+  border-radius: 20px; 
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); 
+  text-align: center; 
+  margin: 20px; 
+  position: relative; 
+  overflow: hidden; 
+} 
+ 
+header { 
+  margin-bottom: 40px; 
+} 
+ 
+header h1 { 
+  font-size: 3.5rem; 
+  color: #C5ADC5; /* Pastel Purple */ 
+  font-weight: 700; 
+  margin-bottom: 10px; 
+} 
+ 
+header p { 
+  font-size: 1.4rem; 
+  color: #6c757d; /* Adjusted to a softer gray */ 
+} 
+ 
+.features { 
+  margin: 40px 0; 
+} 
+ 
+.features h2 { 
+  font-size: 2.5rem; 
+  color: #C5ADC5; /* Pastel Purple */ 
+  margin-bottom: 20px; 
+  font-weight: 700; 
+} 
+ 
+.features ul { 
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+  text-align: left; 
+  display: inline-block; 
+} 
+ 
+.features ul li { 
+  font-size: 1.2rem; 
+  margin: 15px 0; 
+  color: #495057; /* Adjusted to a softer neutral gray */ 
+  padding: 10px; 
+  border-bottom: 1px solid #ddd; 
+  position: relative; 
+  padding-left: 20px; 
+} 
+ 
+.features ul li::before { 
+  content: '•'; 
+  color: #C5ADC5; /* Pastel Purple */ 
+  position: absolute; 
+  left: 0; 
+  font-size: 1.5rem; 
+  line-height: 1.5; 
+} 
+ 
+.auth-buttons { 
+  margin-top: 40px; 
+} 
+ 
+.auth-buttons .btn { 
+  display: inline-block; 
+  margin: 10px; 
+  padding: 15px 30px; 
+  background-color: #C5ADC5; /* Pastel Purple */ 
+  color: white; 
+  text-decoration: none; 
+  border-radius: 30px; 
+  font-size: 1.2rem; 
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+  border: none; 
+  cursor: pointer; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+} 
+ 
+.auth-buttons .btn:hover { 
+  background-color: #a98c9e; /* Slightly darker pastel purple */ 
+  transform: translateY(-3px); 
+} 
+ 
+.auth-buttons .btn:active { 
+  background-color: #8a6b7c; /* Even darker pastel purple */ 
+  transform: translateY(0); 
+} 
+ 
+.auth-buttons .btn-secondary { 
+  background-color: #B2B5E0; /* Light Steel Blue */ 
+  color: #333; 
+} 
+ 
+.auth-buttons .btn-secondary:hover { 
+  background-color: #9a9dd4; /* Slightly darker light steel blue */ 
+}
