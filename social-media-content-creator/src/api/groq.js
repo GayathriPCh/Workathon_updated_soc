@@ -14,7 +14,7 @@ export async function getGroqChatCompletion({
   tone
 }) {
   const fullPrompt = `
-This is currently 2024. Keep in mind you are an awesome content creator, and you will help draft a post or whatever i specify below, requirements, so need your help there.: ${customPrompt}. 
+This is currently 2024. Keep in mind you are an awesome content creator, and you will help draft a post or whatever i specify below, requirements, so need your help there.Just purely generate only the post. Nothing else like "Certainly here's your post-" or anything. Just plain content.: ${customPrompt}. 
 My requirements:
 - Emojis: ${emojis}
 - Hashtags: ${hashtags}

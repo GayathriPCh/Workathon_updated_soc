@@ -53,13 +53,25 @@ header h1 {
   font-size: 16px;
   width: 1000px;
   border-radius: 5px;
-  border: 1px solid transparent; /* Set the border to transparent */
-  background-image: linear-gradient(white, white), /* Background color */
-                    linear-gradient(to right, #41c0ff, #fcbcf9); /* Gradient outline */
-  background-origin: border-box; /* Ensure the gradient follows the border */
-  background-clip: content-box, border-box; /* Clip the background to ensure it covers only the content and border */
+  border: 1px solid transparent;
+  background-image: linear-gradient(white, white), 
+                    linear-gradient(to right, #41c0ff, #fcbcf9);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
   outline: none;
+  transition: background 0.4s ease, box-shadow 0.4s ease; /* Add smooth transitions */
+
+  /* Adding a subtle box-shadow for a smooth appearance */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
+
+.filter-bar input:focus {
+  background-image: linear-gradient(white, white), 
+                    linear-gradient(to right, #41c0ff, #fcbcf9); /* Retain gradient outline on focus */
+  box-shadow: 0 0 10px rgba(65, 192, 255, 0.6), 0 0 15px rgba(252, 188, 249, 0.5); /* Add glow effect */
+  border-color: transparent;
+}
+
 
 
 .filter-bar select {
