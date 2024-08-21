@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { collection, query, where, getDocs, updateDoc, doc } from 'firebase/firestore';
+import { collection, query, where, getDocs, updateDoc, doc, deleteDoc } from 'firebase/firestore';
 import { db } from '../firebase';
 import { auth } from '../firebase';
 import { useNavigate } from 'react-router-dom';
@@ -66,6 +66,21 @@ const Dashboard = () => {
     }
   };
 
+  // Handle deleting a post
+  const handleDeletePost = async (postId) => {
+    const confirmDelete = window.confirm('Are you sure you want to delete this post?');
+    if (confirmDelete) {
+      try {
+        const postRef = doc(db, 'posts', postId); // Reference to the post in Firestore
+        await deleteDoc(postRef); // Delete the document from Firestore
+        setPosts(posts.filter(post => post.id !== postId)); // Update the UI by removing the deleted post
+        alert('Post deleted successfully!');
+      } catch (error) {
+        alert('Failed to delete post: ' + error.message);
+      }
+    }
+  };
+
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -94,6 +109,7 @@ const Dashboard = () => {
               <small>{new Date(post.createdAt.seconds * 1000).toLocaleString()}</small>
               <button onClick={() => handleEditPost(post)} className="edit-button">Edit</button>
               <button onClick={() => handleSharePost(post)} className="share-button">Share</button>
+              <button onClick={() => handleDeletePost(post.id)} className="delete-button">Delete</button>
             </li>
           ))}
         </ul>
