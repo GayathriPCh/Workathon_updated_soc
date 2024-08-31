@@ -1,6 +1,6 @@
 import Groq from 'groq-sdk';
 
-const groq = new Groq({ apiKey: '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', dangerouslyAllowBrowser: true });
+const groq = new Groq({ apiKey: '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', dangerouslyAllowBrowser: true });
 
 export async function getGroqChatCompletion({
   customPrompt,
