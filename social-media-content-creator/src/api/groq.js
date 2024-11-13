@@ -1,6 +1,6 @@
 import Groq from 'groq-sdk';
 
-const groq = new Groq({ apiKey: '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', dangerouslyAllowBrowser: true });
+const groq = new Groq({ apiKey: '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', dangerouslyAllowBrowser: true });
 
 export async function getGroqChatCompletion({
   customPrompt,
@@ -14,7 +14,7 @@ export async function getGroqChatCompletion({
   tone
 }) {
   const fullPrompt = `
-This is currently 2024. Keep in mind you are an awesome content creator, and you will help draft a post or whatever i specify below, requirements, so need your help there.Just purely generate only the post. Nothing else like "Certainly here's your post-" or anything. Just plain content.: ${customPrompt}. 
+This is currently 2024. Keep in mind you are an awesome content creator, and you will help draft a post or whatever i specify below, requirements, so need your help there.Just purely generate only the post. Nothing else like "Certainly here's your post-" or anything.Dont speak anything, just the post generate. Just plain content.: ${customPrompt}. 
 My requirements:
 - Emojis: ${emojis}
 - Hashtags: ${hashtags}
