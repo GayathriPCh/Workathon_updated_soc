@@ -2,11 +2,14 @@
 
 Effortlessly create and share personalized content across multiple platforms. With Flick, stay updated on the latest news tailored to your interests and leverage AI-powered tools to generate high-quality content.
 
+![image](https://github.com/user-attachments/assets/972dc405-cb7f-4066-923d-73f3aca2580e)
+
 ## Features
 
 ### 1. Personalized News Feed
 - Stay informed with news articles tailored to your interests.
 - Articles are scraped and categorized from trusted sources like Vogue, BBC News, and AP News using a custom news scraper.
+![image](https://github.com/user-attachments/assets/2352fd05-f653-4ea7-8755-96d301390ebc)
 
 ### 2. AI-Powered Content Creation
 - Generate high-quality posts in seconds with GROQ AI.
@@ -17,12 +20,14 @@ Effortlessly create and share personalized content across multiple platforms. Wi
   - Tone
   - Emojis
 - Includes a custom post creation option for complete flexibility.
+![image](https://github.com/user-attachments/assets/f752d8d7-079f-4bbc-a3b5-cc0ff7d3a3bd)
 
 ### 3. Multi-Platform Sharing
 - Seamlessly share your thoughts across multiple platforms directly from Flick.
 
 ### 4. Dashboard Management
 - View, edit, save, delete, and share all generated posts.
+![image](https://github.com/user-attachments/assets/e1f24762-153d-401d-b595-67ecf532041d)
 
 ## Technologies Used
 
