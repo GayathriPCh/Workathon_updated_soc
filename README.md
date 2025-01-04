@@ -42,8 +42,8 @@ Effortlessly create and share personalized content across multiple platforms. Wi
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/flick.git
-   cd flick
+   git clone https://github.com/GayathriPCh/Workathon_updated_soc.git
+   cd Workathon_updated_soc
    ```
 
 2. Install dependencies:
